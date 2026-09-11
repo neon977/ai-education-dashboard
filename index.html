@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mathematics Behind AI - Education Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🧠 The Mathematics Behind AI</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="showHome()">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to AI Education</h1>
+                <p>Explore the Mathematics Behind Artificial Intelligence</p>
+                <p class="subtitle">Understand how AI works through interactive educational models</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <h2>What is This?</h2>
+                <div class="about-content">
+                    <p>This educational platform demonstrates how AI systems work using real mathematical principles and algorithms. Each project shows the complete pipeline from data input to decision-making output.</p>
+                    
+                    <h3>Core Concepts You'll Learn:</h3>
+                    <ul class="concepts-list">
+                        <li><strong>Feature Vectors:</strong> How to represent objects as numbers</li>
+                        <li><strong>Normalization:</strong> Scaling features to a common range</li>
+                        <li><strong>Euclidean Distance:</strong> Measuring similarity between data points</li>
+                        <li><strong>K-Nearest Neighbors:</strong> A fundamental classification algorithm</li>
+                        <li><strong>Voting & Confidence:</strong> How AI makes decisions</li>
+                        <li><strong>Pattern Recognition:</strong> Finding patterns in data</li>
+                    </ul>
+
+                    <h3>Key Principle:</h3>
+                    <p class="highlight-box">
+                        <strong>AI is not magic.</strong> AI combines Data + Mathematics + Algorithms + Computation to make intelligent decisions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <h2>Choose a Project</h2>
+                <div class="projects-grid">
+                    <!-- Fruit Classification -->
+                    <div class="project-card">
+                        <div class="project-icon">🍎🍊🍌🍇</div>
+                        <h3>Fruit Classification</h3>
+                        <p>AI learns to identify 4 different fruits (Apple, Orange, Banana, Grape) based on weight and size.</p>
+                        <div class="project-details">
+                            <p><strong>Input:</strong> Weight (grams) & Size score</p>
+                            <p><strong>Output:</strong> Fruit type & confidence</p>
+                            <p><strong>Training Data:</strong> 16 examples</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="showFruitApp()">Start Classification</button>
+                    </div>
+
+                    <!-- Disease Diagnosis -->
+                    <div class="project-card">
+                        <div class="project-icon">🏥</div>
+                        <h3>Disease Diagnosis</h3>
+                        <p>AI analyzes symptoms to diagnose 6 possible diseases (Cold, Flu, Pneumonia, Allergies, Asthma, COVID-19).</p>
+                        <div class="project-details">
+                            <p><strong>Input:</strong> 6 symptoms (fever, cough, etc.)</p>
+                            <p><strong>Output:</strong> Disease diagnosis & confidence</p>
+                            <p><strong>Training Data:</strong> 36 examples</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="showDiagnosisApp()">Start Diagnosis</button>
+                    </div>
+
+                    <!-- Loan Approval -->
+                    <div class="project-card">
+                        <div class="project-icon">💰</div>
+                        <h3>Loan Approval Decision</h3>
+                        <p>AI evaluates financial profiles to approve or reject loans (Asset, Liability, High Risk, Not Viable).</p>
+                        <div class="project-details">
+                            <p><strong>Input:</strong> Income, loan amount, rate, duration</p>
+                            <p><strong>Output:</strong> Loan decision & risk assessment</p>
+                            <p><strong>Training Data:</strong> 24 examples</p>
+                        </div>
+                        <button class="btn btn-primary" onclick="showLoanApp()">Start Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="pipeline">
+                    <div class="pipeline-step">
+                        <div class="step-number">1</div>
+                        <p>Input</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">2</div>
+                        <p>Features</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">3</div>
+                        <p>Normalize</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">4</div>
+                        <p>Distance</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">5</div>
+                        <p>KNN</p>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="pipeline-step">
+                        <div class="step-number">6</div>
+                        <p>Decision</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 The Mathematics Behind AI - Educational Platform</p>
+                <p>This is an educational project. Always consult professionals for real-world decisions.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Fruit Classification App -->
+    <div id="fruit-app" class="page">
+        <div class="app-header">
+            <button class="btn-back" onclick="showHome()">← Back to Home</button>
+            <h2>🍎 Fruit Classification AI</h2>
+        </div>
+        <div class="container app-container">
+            <div class="app-content" id="fruit-content"></div>
+        </div>
+    </div>
+
+    <!-- Disease Diagnosis App -->
+    <div id="diagnosis-app" class="page">
+        <div class="app-header">
+            <button class="btn-back" onclick="showHome()">← Back to Home</button>
+            <h2>🏥 Disease Diagnosis AI</h2>
+        </div>
+        <div class="container app-container">
+            <div class="app-content" id="diagnosis-content"></div>
+        </div>
+    </div>
+
+    <!-- Loan Approval App -->
+    <div id="loan-app" class="page">
+        <div class="app-header">
+            <button class="btn-back" onclick="showHome()">← Back to Home</button>
+            <h2>💰 Loan Approval AI</h2>
+        </div>
+        <div class="container app-container">
+            <div class="app-content" id="loan-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
